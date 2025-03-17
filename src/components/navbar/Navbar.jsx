@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { IoIosSearch } from "react-icons/io";
-import { AiOutlineShoppingCart } from "react-icons/ai";
+import { MdOutlineShoppingCart } from "react-icons/md";
 import { FaRegUser } from "react-icons/fa";
 
 import "./Navbar.css";
@@ -12,18 +12,64 @@ export const Navbar = () => {
       <div className="nav-lerf">
         <ul className="nav-menu">
           <li onClick={() => setmenu("Whatever")}>
-            <Link to={"/"}>Whatever</Link>
+            <Link style={{ textDecoration: "none", color: "black" }} to={"/"}>
+              Whatever
+            </Link>
             {menu === "Whatever" ? <hr /> : <></>}
           </li>
           <li onClick={() => setmenu("Shop")}>
-            <Link to={"/shop"}>Shop</Link> {menu === "Shop" ? <hr /> : <></>}
+            <Link
+              style={{ textDecoration: "none", color: "black" }}
+              to={"/shop"}
+            >
+              Shop
+            </Link>
+            {menu === "Shop" ? <hr /> : <></>}
           </li>
-          <li onClick={() => setmenu("Features")}>
-            <Link to={"/features"}>Features</Link>{" "}
+          {/* <li onClick={() => setmenu("Features")}>
+            <Link
+              style={{ textDecoration: "none", color: "black" }}
+              to={"/features"}
+            >
+              Features
+            </Link>{" "}
             {menu === "Features" ? <hr /> : <></>}
+          </li> */}
+          <li onClick={() => setmenu("men")}>
+            <Link
+              style={{ textDecoration: "none", color: "black" }}
+              to={"/men"}
+            >
+              Men
+            </Link>
+            {menu === "men" ? <hr /> : <></>}
           </li>
+          <li onClick={() => setmenu("women")}>
+            <Link
+              style={{ textDecoration: "none", color: "black" }}
+              to={"/women"}
+            >
+              Women
+            </Link>
+            {menu === "women" ? <hr /> : <></>}
+          </li>
+          <li onClick={() => setmenu("kid")}>
+            <Link
+              style={{ textDecoration: "none", color: "black" }}
+              to={"/kid"}
+            >
+              Kid
+            </Link>
+            {menu === "kid" ? <hr /> : <></>}
+          </li>
+
           <li onClick={() => setmenu("Support")}>
-            <Link to={"/support"}>Support</Link>
+            <Link
+              style={{ textDecoration: "none", color: "black" }}
+              to={"/support"}
+            >
+              Support
+            </Link>
             {menu === "Support" ? <hr /> : <></>}
           </li>
         </ul>
@@ -38,7 +84,7 @@ export const Navbar = () => {
         </div>
         <div className="nav-right-login-cart">
           <FaRegUser fontSize="25px" />
-          <AiOutlineShoppingCart size="30px" />
+          <MdOutlineShoppingCart size="30px" />
           <div className="nav-cart-accourt">0</div>
         </div>
       </div>

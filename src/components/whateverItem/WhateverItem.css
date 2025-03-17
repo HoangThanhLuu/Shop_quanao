@@ -1,0 +1,33 @@
+.whateverItem {
+  display: flex;
+  justify-content: space-between;
+
+  align-items: center;
+}
+
+.whateverLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.whateverRight {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.whateverMid {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+.whateverMid .whateverMid-flash {
+  font-size: 60px;
+}
+
+.whateverMid .whateverMid-Up {
+  font-size: 20px;
+  margin-top: -20px;
+}
