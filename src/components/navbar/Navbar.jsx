@@ -84,8 +84,16 @@ export const Navbar = () => {
           </label>
         </div>
         <div className="nav-right-login-cart">
-          <FaRegUser fontSize="25px" />
-          <Link to={"/cart"}>
+          <Link
+            style={{ textDecoration: "none", color: "inherit" }}
+            to={"/registerSingin"}
+          >
+            <FaRegUser fontSize="25px" />
+          </Link>
+          <Link
+            style={{ textDecoration: "none", color: "inherit" }}
+            to={"/cart"}
+          >
             <MdOutlineShoppingCart size="30px" />
           </Link>
           <div className="nav-cart-accourt">{totalCart()}</div>

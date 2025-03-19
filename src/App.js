@@ -14,6 +14,9 @@ import kid_banner from './components/assets/kid_banner.png';
 
 import { Product } from './components/page/Product.jsx'
 import { Cart } from './components/page/Cart.jsx';
+import { LoginSingup } from './components/page/LoginSingup.jsx';
+import { RegisterSingin } from './components/page/RegisterSingin.jsx';
+import { Support } from './components/page/Support.jsx';
 
 function App() {
   return (
@@ -34,6 +37,11 @@ function App() {
           </Route>
           <Route path="/shop" element={<Shop />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/support" element={<Support />} />
+
+          <Route path="/loginSingup" element={<LoginSingup />} />
+          <Route path="/registerSingin" element={<RegisterSingin />} />
+
 
         </Routes>
       </BrowserRouter>
