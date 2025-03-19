@@ -1,5 +1,10 @@
 .whateverItem {
   display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.whateverItem-left {
+  display: flex;
   justify-content: space-between;
 
   align-items: center;
@@ -23,11 +28,24 @@
   align-items: center;
   flex-direction: column;
 }
+.whateverMid-Up {
+  font-family: "Big Shoulders Stencil", sans-serif;
+}
 .whateverMid .whateverMid-flash {
   font-size: 60px;
+  font-family: "Ponomar";
 }
 
 .whateverMid .whateverMid-Up {
   font-size: 20px;
   margin-top: -20px;
+}
+.whateverBottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.whateverBottom img {
+  width: 150px;
+  height: 150px;
 }

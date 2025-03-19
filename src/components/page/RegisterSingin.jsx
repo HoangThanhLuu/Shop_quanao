@@ -20,8 +20,8 @@ export const RegisterSingin = () => {
         <form onSubmit={handleSubmit}>
           <div className="input-group">
             <input
-              type="email"
-              placeholder="Email"
+              type="text"
+              placeholder="username"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
