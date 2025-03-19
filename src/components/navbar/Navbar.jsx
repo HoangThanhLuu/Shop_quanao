@@ -1,11 +1,12 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { IoIosSearch } from "react-icons/io";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { FaRegUser } from "react-icons/fa";
-
+import { ShopContext } from "../context/ShopContext";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 export const Navbar = () => {
+  const { totalCart } = useContext(ShopContext);
   const [menu, setmenu] = useState("Whatever");
   return (
     <div className="nav">
@@ -78,14 +79,16 @@ export const Navbar = () => {
       <div className="nav-right">
         <div className="nav-right-input">
           <input id="search" type="text" placeholder="search" />
-          <label for="search">
+          <label htmlFor="search">
             <IoIosSearch size="30px" />
           </label>
         </div>
         <div className="nav-right-login-cart">
           <FaRegUser fontSize="25px" />
-          <MdOutlineShoppingCart size="30px" />
-          <div className="nav-cart-accourt">0</div>
+          <Link to={"/cart"}>
+            <MdOutlineShoppingCart size="30px" />
+          </Link>
+          <div className="nav-cart-accourt">{totalCart()}</div>
         </div>
       </div>
     </div>

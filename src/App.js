@@ -13,6 +13,7 @@ import kid_banner from './components/assets/kid_banner.png';
 
 
 import { Product } from './components/page/Product.jsx'
+import { Cart } from './components/page/Cart.jsx';
 
 function App() {
   return (
@@ -29,9 +30,10 @@ function App() {
 
 
           <Route path="/product" element={<Product />} >
-            <Route path=':productId' element={<Product />} />
+            <Route path=":productId" element={<Product />} />
           </Route>
           <Route path="/shop" element={<Shop />} />
+          <Route path="/cart" element={<Cart />} />
 
         </Routes>
       </BrowserRouter>
